@@ -48,7 +48,16 @@ You can install "tox-pyo3" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-* If installed, it's automatically used if Cargo.toml is present
+* When you set pyo3=true in your testenv this plugin
+  automatically detects if Cargo.toml is present and if so, it will compile the
+  extension
+
+Example:
+
+```ini
+[testenv]
+pyo3 = True
+```
 
 Contributing
 ------------

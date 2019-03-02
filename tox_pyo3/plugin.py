@@ -10,12 +10,25 @@ log = logging.getLogger('pyo3')
 
 
 @hookimpl
+def tox_addoption(parser):
+    parser.add_testenv_attribute("pyo3",
+                                 "bool",
+                                 "Build PyO3 Rust extension",
+                                 default=False)
+
+
+@hookimpl
 def tox_testenv_create(venv, action):
+    if not venv.envconfig.pyo3:
+        return
     venv.envconfig.whitelist_externals.append('pyo3-pack')
 
 
 @hookimpl
 def tox_testenv_install_deps(venv, action):
+    if not venv.envconfig.pyo3:
+        return
+
     basepath = venv.envconfig.changedir
     if not Path(basepath, 'Cargo.toml').exists():
         log.info("No Rust extension found. Skipping...")
