@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import logging
-from pathlib import Path
+try:
+    from pathlib import Path
+except ImportError:
+    from pathlib2 import Path
 
 import pluggy
 
