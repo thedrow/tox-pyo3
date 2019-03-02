@@ -15,7 +15,7 @@ setup(
     name='tox-pyo3',
     description='Build a rust extension using PyO3 using tox',
     long_description=read('README.rst'),
-    version='0.1.2',
+    version='0.1.3',
     author='Omer Katz',
     author_email='omer.drow@gmail.com',
     maintainer='Omer Katz',
