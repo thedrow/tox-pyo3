@@ -15,7 +15,7 @@ setup(
     name='tox-pyo3',
     description='Build a rust extension using PyO3 using tox',
     long_description=read('README.rst'),
-    version='0.1.0',
+    version='0.1.1',
     author='Omer Katz',
     author_email='omer.drow@gmail.com',
     maintainer='Omer Katz',
@@ -23,7 +23,7 @@ setup(
     url='https://github.com/thedrow/tox-pyo3',
     packages=find_packages(),
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
-    install_requires=['tox>=3.0.0'],
+    install_requires=['tox>=3.0.0', "pathlib2;python_version=='2.7'"],
     entry_points={'tox': ['pyo3 = tox_pyo3.plugin']},
     license='BSD-3',
     classifiers=[
