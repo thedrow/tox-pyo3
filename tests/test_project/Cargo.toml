@@ -1,0 +1,11 @@
+[package]
+name = "test-project"
+version = "0.1.0"
+authors = ["Omer Katz <omer.drow@gmail.com>"]
+
+[lib]
+name = "test_project"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.6.0-alpha.4", features = ["extension-module"] }

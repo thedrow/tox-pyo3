@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-def test_dummy():
+def test_invocation():
     """
     TODO think about how to test this properly
     TODO check tox own tests to see how to do this (use of _pytestplugin)
