@@ -2,18 +2,15 @@
 import sys
 import logging
 try:
-    from pathlib import Path
-except ImportError:
     from pathlib2 import Path
+except ImportError:
+    from pathlib import Path
 
 import pluggy
 
 hookimpl = pluggy.HookimplMarker("tox")
 
 log = logging.getLogger('pyo3')
-
-
-str_t = str if sys.version_info[0] == 3 else unicode
 
 
 @hookimpl
@@ -37,7 +34,7 @@ def tox_testenv_install_deps(venv, action):
         return
 
     basepath = venv.envconfig.changedir
-    if not Path(str_t(basepath), 'Cargo.toml').exists():
+    if not Path(basepath, 'Cargo.toml').exists():
         log.info("No Rust extension found. Skipping...")
         return
     cmd = venv.getcommandpath("pyo3-pack")
