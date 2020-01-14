@@ -27,13 +27,13 @@ An extremely basic plugin that builds Rust extensions within tox virtualenvs.
 Features
 --------
 
-* Runs pyo3-pack develop
+* Runs maturin develop
 
 
 Requirements
 ------------
 
-* pyo3-pack must be installed somewhere in your system
+* maturin must be installed somewhere in your system
 * A rust compiler
 
 
