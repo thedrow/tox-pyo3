@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
 import logging
 try:
     from pathlib2 import Path
