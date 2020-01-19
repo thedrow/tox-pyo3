@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
 import logging
 try:
     from pathlib2 import Path
@@ -25,7 +24,7 @@ def tox_addoption(parser):
 def tox_testenv_create(venv, action):
     if not venv.envconfig.pyo3:
         return
-    venv.envconfig.whitelist_externals.append('pyo3-pack')
+    venv.envconfig.whitelist_externals.append('maturin')
 
 
 @hookimpl
@@ -37,7 +36,7 @@ def tox_testenv_install_deps(venv, action):
     if not Path(basepath, 'Cargo.toml').exists():
         log.info("No Rust extension found. Skipping...")
         return
-    cmd = venv.getcommandpath("pyo3-pack")
+    cmd = venv.getcommandpath("maturin")
     action.setactivity("pyo3", "Building Rust extension module")
     venv._pcall([cmd, "develop"],
                 venv=True,
