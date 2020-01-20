@@ -74,3 +74,9 @@ Issues
 ------
 
 If you encounter any problems, please `file an issue`_ along with a detailed description.
+
+.. _pip: https://pip.pypa.io/en/stable/
+.. _PyPI: https://pypi.org/
+.. _tox: https://tox.readthedocs.io/en/latest/
+.. _BSD-3: https://opensource.org/licenses/BSD-3-Clause
+.. _file an issue: https://github.com/thedrow/tox-pyo3/issues
