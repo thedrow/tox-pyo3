@@ -13,8 +13,9 @@ def read(fname):
 
 setup(
     name='tox-pyo3',
-    description='Build a rust extension using PyO3 using tox',
+    description='Build a rust extension using PyO3 using tox.',
     long_description=read('README.rst'),
+    long_description_content_type='text/x-rst',
     version='1.0.0',
     author='Omer Katz',
     author_email='omer.drow@gmail.com',
