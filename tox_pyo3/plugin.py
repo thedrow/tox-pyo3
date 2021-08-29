@@ -24,7 +24,7 @@ def tox_addoption(parser):
 def tox_testenv_create(venv, action):
     if not venv.envconfig.pyo3:
         return
-    venv.envconfig.whitelist_externals.append('maturin')
+    venv.envconfig.allowlist_externals.append('maturin')
 
 
 @hookimpl
